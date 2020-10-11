@@ -1,0 +1,115 @@
+sidebar:
+  catalog: Каталог
+  have_read: Вы прочитали
+
+footer:
+  framework: Framework
+  theme: Тема
+
+copy:
+  success: Скопировано!
+  error: Ошибка копирования!
+  noSupport: Браузер не поддерживает!
+
+page:
+  articles: Статьи
+  tag: Теги
+  category: Категории
+  archives: Архивы
+
+sticky: Стикер
+no_title: Без названия
+
+post:
+  created: Создано
+  updated: Обновлено
+  wordcount: Количество слов
+  min2read: Время прочтения
+  min2read_unit: мин
+  page_pv: Просмотр сообщений
+  comments: Комментарии
+  copyright:
+    author: Автор
+    link: Ссылка
+    copyright_notice: Уведомление об авторских правах
+    copyright_content: 'Все статьи в этом блоге лицензированы под <a href="%s">%s</a>'
+  recommend: Рекомендовано
+
+search: Поиск
+algolia_search:
+  input_placeholder: Поиск сообщений
+  hits_empty: "Мы не нашли никаких результатов для поиска: ${query}."
+  hits_stats: "${hits} результатов найдено за ${time} ms"
+
+local_search:
+  label: Локальный поиск
+  input_placeholder: Поиск сообщений
+  hits_empty: "Мы не нашли никаких результатов для поиска: ${query}"
+  powered_by: Powered by
+
+pagination:
+  prev: Педыдущий пост
+  next: Следующий пост
+
+comment: Комментарий
+
+aside:
+  articles: Статьи
+  tags: Теги
+  categories: Категории
+  card_announcement: Объявление
+  card_categories: Категории
+  card_tags: Теги
+  card_archives: Aрхивы
+  card_recent_post: Последнее сообщение
+  card_webinfo:
+    headline: Информация
+    article_name: Статья
+    runtime:
+      name: Время старта
+      unit: Дней
+    last_push_date:
+      name: Последнее нажатие
+    site_wordcount: Общее количество
+    site_uv_name: UV
+    site_pv_name: PV
+  more_button: Больше
+  card_newest_comments:
+    heading: Последние комментарии
+    loading_text: Загрузка...
+    error: Не удалось получить данные, убедитесь, что настройки верны.
+
+date_suffix:
+  just: только что
+  min: минут назад
+  hour: часов назад
+  day: дней назад
+  month: месяцев назад
+
+donate: Донаты
+share: Поделиться
+
+rightside:
+  readmode_title: Режим чтения
+  translate_title: Переключение между традиционным китайским и упрощенным китайским
+  night_mode_title: Переключение между светлой и темной темой 
+  back_to_top: Вернуться к началу
+  toc: Содержание
+  scroll_to_comment: Прокручивать до комментариев
+  setting: Настройка
+
+copy_copyright:
+  author: Автор
+  link: Ссылка
+  source: Источник
+  info: Авторские права принадлежат автору. Для коммерческих перепечаток, пожалуйста, свяжитесь с автором для авторизации. Для некоммерческих перепечаток, пожалуйста, укажите источник.
+
+Snackbar:
+  day_to_night: Темный режим активирован 
+  night_to_day: Светлый режим активирован 
+
+loading: Загрузка...
+
+error404:
+  error_title: Страница не найдена
+  back_button: Вернутся домой

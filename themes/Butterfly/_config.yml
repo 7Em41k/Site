@@ -1,0 +1,931 @@
+# Главное меню навигации
+# ---------------
+# format: xxx: ссылка || icon
+# подменю
+# xxx || icon:
+#   xxx || ссылка || icon
+menu:
+  Домашняя страница: / || fa fa-home
+  Архивы: /archives/ || fa fa-archive
+  Теги: /tags/ || fa fa-tags
+  Категории: /categories/ || fa fa-folder-open
+  Ссылки: /link/ || fa fa-link
+  О нас: /about/ || fa fa-heart
+  Лист||fa fa-list:
+    - Музыка || /music/ || fa fa-music
+    - Галерея || /gallery/ || far fa-image
+
+# Скрыть элементы дочернего меню на мобильной боковой панели
+hide_sidebar_menu_child: false
+
+# Блоки кода
+# --------------------------------------
+
+highlight_theme: ocean #  darker / pale night / light / ocean / mac / mac light / false
+highlight_copy: true # кнопка копирования
+highlight_lang: true # показать язык кода
+highlight_shrink: false # true: уменьшить блоки кода / false: развернуть блоки кода | нет: развернуть блоки кода и скрыть кнопку
+code_word_wrap: false
+
+# копировать настройки
+# copyright: добавить информацию об авторских правах после копирования контента.
+copy:
+  enable: true
+  copyright:
+    enable: false
+    limit_count: 50
+
+# социальные настройки
+# формальный:
+# icon: ссылка || описание
+social:
+  # fab fa-github: https://github.com/xxxxx || Github
+  # fas fa-envelope: mailto:xxxxxx@gmail.com || Email
+  fab fa-instagram: https://www.instagram.com/7em_41_k/ || Instagram
+  fa fa-envelope: mailto:Sem4ikPC@gmail.com || Email
+  fa fa-rss: /atom.xml || RSS
+# поиск
+# --------------------------------------
+
+# Algolia поиск
+algolia_search:
+  enable: false
+  hits:
+    per_page: 6
+
+  labels:
+    input_placeholder: Search for Posts
+    hits_empty: "We didn't find any results for the search: ${query}" # if there are no result
+    hits_stats: '${hits} results found in ${time} ms'
+
+# Месный поиск
+local_search:
+  enable: true
+  labels:
+    input_placeholder: Search for Posts
+    hits_empty: "We didn't find any results for the search: ${query}" # if there are no result
+
+# Математика
+# --------------------------------------
+# О per_page
+# если вы установите значение true, скрипт mathjax / katex будет загружаться на каждой странице (true означает загрузку js на каждой странице)
+# если вы установите для него значение false, он загрузит скрипт mathjax / katex в соответствии с вашими настройками (добавьте 'mathjax: true' в начало страницы)
+# (false Load при необходимости, необходимо добавить mathjax: true к используемому Markdown Front-Дело)
+
+# MathJax
+mathjax:
+  enable: false
+  per_page: false
+
+# KaTeX
+katex:
+  enable: false
+  per_page: false
+  hide_scrollbar: true
+
+# Изображение
+# --------------------------------------
+
+# Favicon
+# ---------------
+favicon: /img/Logo.svg
+
+# Аватар
+avatar:
+  img: /img/avatar.png
+  effect: false
+
+# Изображение баннера главной страницы
+index_img: 
+  
+# Если баннер страницы не установлен, он покажет top_img
+default_top_img: /img/index.jpg
+
+# Изображение баннера страницы архива
+archive_img:
+
+# Если баннер страницы тега не установлен, он покажет top_img
+# примечание: страница тегов, а не страница тегов
+tag_img:
+
+# Изображение баннера страницы тега
+# format: 
+#  - tag name: xxxxx
+tag_per_img:
+
+# Если баннер страницы категории не установлен, он покажет top_img
+# примечание: страница категорий, а не страница категорий
+category_img:
+
+# Изображение баннера страницы категории
+# format: 
+#  - category name: xxxxx
+category_per_img:
+
+# Если вы используете hexo-douban, вы можете настроить его
+# douban:
+#   meta: false
+#   movies_img:
+#   books_img:
+#   games_img:
+
+cover:
+  # отображать обложку или нет
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  # положение обложки на главной странице
+  # left/right/both
+  position: both
+  # Если обложка не установлена, отображается обложка по умолчанию.
+  default_cover:
+    - /img/post.jpg
+
+# Заменить битые изображения
+error_img:
+  flink: /img/friend_404.gif
+  post_page: /img/404.jpg
+
+# Простая страница 404
+error_404:
+  enable: true
+  subtitle: 'Page Not Found'
+  background: /img/404.png
+
+post_meta:
+  page: # Домашняя страница
+    date_type: created # создано или обновлено или и то, и другое
+    date_format: date # дата / родственник
+    categories: true # правда или ложь
+    tags: false # правда или ложь
+    label: true # правда или ложь
+  post:
+    date_type: both # создано или обновлено или и то, и другое
+    date_format: date # дата / родственник
+    categories: true # правда или ложь
+    tags: true # правда или ложь
+    label: true # правда или ложь
+
+# wordcount
+wordcount:
+  enable: false
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+# Показать введение к статье на главной странице
+# 1: описание
+# 2: both (если описание существует, оно покажет описание или покажет auto_excerpt)
+# 3: auto_excerpt (по умолчанию)
+# false: не показывать введение к статье
+index_post_content:
+  method: 3
+  length: 500 # если вы установите метод 2 или 3, длину нужно настроить
+
+# Post
+# --------------------------------------
+
+# toc
+toc:
+  enable: true
+  number: true
+  auto_open: true # автоматическое открытие боковой панели
+
+post_copyright:
+  enable: true
+  decode: false
+  license: 7Em41k
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+# Спонсор / награда
+reward:
+  enable: false
+  QR_code:
+    # - img: /img/wechat.jpg
+    #   link:
+    #   text: wechat
+    # - img: /img/alipay.jpg
+    #   link:
+    #   text: alipay
+
+# Статьи по Теме
+related_post:
+  enable: true
+  limit: 6 # Количество отображаемых сообщений
+  date_type: created # или созданы или обновлены
+
+# figcaption
+photofigcaption: false
+
+# якорь
+# когда вы прокручиваете пост, URL обновляется в соответствии с идентификатором заголовка.
+anchor: false
+
+# Отображает устаревшее уведомление для сообщения
+noticeOutdate:
+  enable: false
+  style: flat # стиль: simple/flat
+  limit_day: 500 # Когда это будет показано
+  position: top # позиция: top/bottom
+  message_prev: It has been
+  message_next: days since the last update, the content of the article may be outdated.
+
+# Поделиться системой
+# --------------------------------------
+
+# AddThis
+# https://www.addthis.com/
+addThis:
+  enable: false
+  pubid:
+
+# Share.js
+# https://github.com/overtrue/share.js
+sharejs:
+  enable: true
+  sites: facebook,twitter,wechat,weibo,qq
+
+# AddToAny
+# https://www.addtoany.com/
+addtoany:
+  enable: false
+  item: facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link
+
+# Система комментариев
+# --------------------------------------
+
+comments:
+# До двух систем комментариев, первый будет показан по умолчанию
+   # Выберите: Disqus/Disqusjs/Livere/Gitalk/Valine/Utterances/Facebook Comments
+  use:
+  # - Valine
+  # - Disqus
+  text: true # Отображение названия комментария рядом с кнопкой
+   # lazyload: система комментариев будет загружена, когда элемент комментария войдет в область просмотра браузера.
+   # Если вы установите значение true, счетчик комментариев будет недействительным
+  lazyload: false
+  count: false # Отображение количества комментариев в top_img
+
+# disqus
+# https://disqus.com/
+disqus:
+  shortname:
+
+# Альтернативный Disqus - рендеринг комментариев с помощью Disqus API
+# DisqusJS
+# https://github.com/SukkaW/DisqusJS
+disqusjs:
+  shortname:
+  siteName:
+  apikey:
+  api:
+  nocomment: # отображать, когда к сообщению в блоге или статье не прикреплен комментарий
+  admin:
+  adminLabel:
+
+# livere
+# https://www.livere.com/
+livere:
+  uid:
+
+# gitalk
+# https://github.com/gitalk/gitalk
+gitalk:
+  client_id:
+  client_secret:
+  repo:
+  owner:
+  admin:
+  language: ru # en, zh-CN, zh-TW, es-ES, fr, ru
+  perPage: 10 # Размер пагинации, максимум 100.
+  distractionFreeMode: false # Facebook-подобный режим без отвлекающих факторов..
+  pagerDirection: last # Направление сортировки комментариев, доступные значения - последнее и первое.
+  createIssueManually: false # Gitalk автоматически создаст соответствующую проблему github для каждой вашей страницы.
+
+# valine
+# https://valine.js.org
+valine:
+  appId: # приложение Leancloud, идентификатор приложения
+  appKey: ## ключ приложения для приложения Leancloud
+  pageSize: 10 # размер страницы списка комментариев
+  avatar: monsterid # gravatar style https://valine.js.org/#/avatar
+  lang: ru # i18n: zh-CN/zh-TW/en/ja
+  placeholder: Please leave your footprints # валин-заполнитель для комментариев (например: пожалуйста, оставьте свои следы)
+  guest_info: nick,mail,link # валин информация заголовка комментария (ник / почта / ссылка)
+  recordIP: false # Запись IP рецензента
+  serverURLs: # Эта конфигурация подходит для внутренних пользователей пользовательских доменных имен, зарубежная версия будет обнаружена автоматически (нет необходимости вводить вручную)
+  bg: # valine фон
+  emojiCDN: # emoji CDN
+  enableQQ: false # включите поле «Псевдоним», чтобы автоматически получать псевдоним QQ и аватар QQ
+  requiredFields: nick,mail # обязательные поля (ник / почта) # обязательные поля (ник / почта)
+
+# utterances
+# https://utteranc.es/
+utterances:
+  repo:
+  # Issue Mapping: pathname/url/title/og:title
+  issue_term: pathname
+  # Theme: github-light/github-dark/github-dark-orange/icy-dark/dark-blue/photon-dark
+  light_theme: github-light
+  dark_theme: photon-dark
+
+# Facebook Comments Plugin
+# https://developers.facebook.com/docs/plugins/comments/
+facebook_comments:
+  app_id:
+  user_id: # optional
+  pageSize: 10 # The number of comments to show
+  order_by: social # social/time/reverse_time
+  lang: en_US # Language en_US/zh_CN/zh_TW and so on
+
+# Сервисы чата
+# --------------------------------------
+
+# Кнопка чата [рекомендовать]
+# Он создаст кнопку в правом нижнем углу веб-сайта и скроет кнопку происхождения
+chat_btn: false
+
+# Кнопка чата происхождения отображается при прокрутке вверх, а кнопка скрывается при прокрутке вниз
+chat_hide_show: false
+
+# chatra
+# https://chatra.io/
+chatra:
+  enable: false
+  id:
+
+# tidio
+# https://www.tidio.com/
+tidio:
+  enable: false
+  public_key:
+
+# daovoice
+# http://daovoice.io/
+daovoice:
+  enable: false
+  app_id:
+
+# gitter
+# https://gitter.im/
+gitter:
+  enable: false
+  room:
+
+# crisp
+# https://crisp.chat/en/
+crisp:
+  enable: false
+  website_id:
+
+# Настройки нижнего колонтитула
+# --------------------------------------
+footer:
+  owner:
+    enable: true
+    since: 2020
+  custom_text:
+  copyright: false # Авторские права на тему и фреймворк
+  ICP: # Китайская лицензия ICP
+    enable: false
+    url:
+    text:
+    icon: /img/icp.png
+
+# Analysis
+# --------------------------------------
+
+# Baidu Analytics
+# https://tongji.baidu.com/web/welcome/login
+baidu_analytics:
+
+# Google Analytics
+# https://analytics.google.com/analytics/web/
+google_analytics:
+
+# Tencent Analytics ID
+# https://mta.qq.com
+tencent_analytics:
+
+# CNZZ Analytics
+# https://www.umeng.com/
+cnzz_analytics:
+
+# Рекламное объявление
+# --------------------------------------
+
+# Google Adsense
+google_adsense:
+  enable: false
+  auto_ads: true
+  js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+  client:
+  enable_page_level_ads: true
+
+# Insert ads manually 
+# ad:
+#   index:
+#   aside:
+#   post:
+
+# Проверка
+# --------------------------------------
+
+# Google Webmaster tools verification setting
+# See: https://www.google.com/webmasters/
+google_site_verification:
+
+# Bing Webmaster tools verification setting
+# See: https://www.bing.com/webmaster/
+bing_site_verification:
+
+# Baidu Webmaster tools verification setting
+# See: https://ziyuan.baidu.com/site/
+baidu_site_verification:
+
+# 360 Webmaster tools verification setting
+# see http://zhanzhang.so.com/
+qihu_site_verification:
+
+# Yandex Webmaster tools verification setting
+# see https://webmaster.yandex.com/
+yandex_site_verification:
+
+# Украсить / Эффект
+# --------------------------------------
+
+# Цвет темы для настройки
+# Примечание: значение цвета должно быть заключено в двойные кавычки, например "# 000", иначе может возникнуть ошибка!
+
+# theme_color:
+#   enable: true
+#   main: "#49B1F5"
+#   paginator: "#00c4b6"
+#   button_hover: "#FF7242"
+#   text_selection: "#00c4b6"
+#   link_color: "#99a9bf"
+#   meta_color: "#858585"
+#   hr_color: "#A4D8FA"
+#   code_foreground: "#F47466"
+#   code_background: "rgba(27, 31, 35, .05)"
+#   toc_color: "#00c4b6"
+#   blockquote_padding_color: "#49b1f5"
+#   blockquote_background_color: "#49b1f5"
+
+# Настройки top_img домашней страницы
+# по умолчанию: верхний img - полный экран, информация о сайте - средний
+# Положение информации о сайте, например: 300px / 300em / 300rem / 10%
+index_site_info_top:
+# Высота top_img, например: 300px / 300em / 300rem
+index_top_img_height:
+
+# Настройка пользовательского интерфейса страницы категорий и тегов
+# index-такой же, как пользовательский интерфейс домашней страницы
+# default-same as archives UI такой же, как пользовательский интерфейс страницы архивов по умолчанию
+category_ui: # Оставьте пустым или индексируйте
+tag_ui: # Оставьте пустым или индексируйте
+
+# Фон веб-сайта
+# можно установить цвет или изображение
+# The formal of image: url(http://xxxxxx.com/xxx.jpg)
+background:
+
+# Фон нижнего колонтитула
+footer_bg: true
+
+# положение нижней правой кнопки / единица измерения по умолчанию: px
+rightside-bottom:
+
+# Ввести переходы
+enter_transitions: true
+
+# Фоновые эффекты
+# --------------------------------------
+
+# canvas_ribbon
+# See: https://github.com/hustcc/ribbon.js
+canvas_ribbon:
+  enable: false
+  size: 150
+  alpha: 0.6
+  zIndex: -1
+  click_to_change: false
+  mobile: false
+
+# Развевающаяся лента
+canvas_fluttering_ribbon:
+  enable: true
+  mobile: true
+
+# canvas_nest
+# https://github.com/hustcc/canvas-nest.js
+canvas_nest:
+  enable: false
+  color: '0,0,255' ## цвет линий, по умолчанию: '0,0,0'; Значения RGB: (R, G, B). (Примечание: используйте ',' для разделения.)
+  opacity: 0.7 # непрозрачность линии (0 ~ 1), по умолчанию: 0,5.
+  zIndex: -1 # z-index свойство фона, по умолчанию: -1.
+  count: 99 # количество строк, по умолчанию: 99.
+  mobile: false
+
+# Эффект пишущей машинки
+# https://github.com/disjukr/activate-power-mode
+activate_power_mode:
+  enable: false
+  colorful: true # анимация открытых частиц
+  shake: true # открытый коктейль 
+  mobile: false
+
+# Эффекты щелчка мышью: фейерверк
+fireworks:
+  enable: false
+  zIndex: 9999 # -1 or 9999
+  mobile: false
+
+# Эффекты щелчка мыши: символ сердца
+click_heart:
+  enable: false
+  mobile: false
+
+# Эффекты щелчка мышью: слова
+ClickShowText:
+  enable: false
+  text:
+    # - I
+    # - LOVE
+    # - YOU
+  fontSize: 15px
+  mobile: false
+
+# Режим отображения по умолчанию
+# light (default) / dark
+display_mode: dark
+
+# Украсить
+beautify:
+  enable: false
+  field: post # site/post
+  title-prefix-icon: '\f0c1'
+  title-prefix-icon-color: '#F47466'
+
+# Глобальные настройки шрифта
+# Не изменяйте следующие настройки, если не знаете, как они работают
+font:
+  global-font-size:
+  code-font-size:
+  font-family:
+  code-font-family:
+
+# Настройки шрифта для заголовка сайта и подзаголовка сайта
+# Название сайта в верхнем левом углу
+# blog_title_font:
+   # font_link: https://fonts.googleapis.com/css?family=Titillium+Web&display=swap
+   # font-family: Titillium Web, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', без засечек
+
+# Настройка значка разделителя
+hr_icon:
+  enable: true
+  icon: # значение Unicode значка Font Awesome, например '\ 3423'
+  icon-top:
+
+# подзаголовок на главной странице
+subtitle:
+  enable: true
+  # Эффект пишущей машинки
+  effect: true
+  # цикл 
+  loop: true
+  # source Вызов сторонней службы
+  # источник: ложный вызов закрытия
+  # source: 1 Случайные цитаты для вызова Botian api (упрощенно) https://api.btstu.cn/
+  # источник: 2 Предложение с сайта Yiyan.com (упрощенное) https://hitokoto.cn/
+  # source: 3 Call Yijuwang (упрощенное письмо) http://yijuzhan.com/
+  # source: 4 Call Today's Poems (Simplified) https://www.jinrishici.com/
+  # подзаголовок сначала отобразит источник, затем содержимое подзаголовка.
+  source: false
+  # Если есть запятая ',', используйте экранированные символы &#44;
+  # Если есть английские двойные кавычки '"', используйте экранированные символы &quot;
+  # В начале нельзя использовать escape-символы, при необходимости заключите все предложение в двойные кавычки.
+  # Если вы отключите эффект набора текста, в субтитрах будет отображаться только первая строка текста в субтитрах.
+  sub:
+    - Что может быть лучше чем классный профиль?
+    - Поможем оформить любой профиль - КРАСИВО!!!
+
+
+# Загрузка анимации
+preloader: false
+
+# в стороне
+# --------------------------------------
+
+aside:
+  enable: true
+  mobile: true # дисплей на мобильном устройстве
+  position: left # влево или вправо
+  card_author:
+    enable: true
+    description:
+    button:
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/7Em41k
+  card_announcement:
+    enable: true
+    content: Это тупая попытка настроить тему
+  card_recent_post:
+    enable: true
+    limit: 5 # если установлено 0, будут показаны все
+    sort: date # дата или обновлено
+  card_categories:
+    enable: true
+    limit: 8 # если установлено 0, будут показаны все
+    expand: none # нет / истина / ложь
+  card_tags:
+    enable: true
+    limit: 40 # если установлено 0, будут показаны все
+    color: false
+  card_archives:
+    enable: true
+    type: monthly # ежегодно или ежемесячно
+    format: MMMM YYYY # например: YYYY год ММ месяц
+    order: -1 # Вид по порядку. 1 по возрастанию; -1, desc по убыванию
+    limit: 8 # если установлено 0, будут показаны все
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+
+# busuanzi count для PV / UV на сайте
+# Количество посетителей
+busuanzi:
+  site_uv: false
+  site_pv: false
+  page_pv: false
+
+# Разница во времени между датой публикации и текущим моментом
+# Формально: время месяца / дня / года или год / месяц / день
+runtimeshow:
+  enable: false
+  publish_date:
+
+# В стороне виджет - Новые комментарии
+newest_comments:
+  enable: false
+  limit: 6
+  avatar: true
+  leancloud:
+    enable: false
+    appId: # приложение Leancloud, идентификатор приложения
+    appKey: # ключ приложения для приложения Leancloud
+    serverURL: # Эта конфигурация подходит для внутренних пользователей пользовательских доменных имен, зарубежная версия будет обнаружена автоматически (нет необходимости вводить вручную)
+    default_avatar: # mp/identicon/monsterid/wavatar/retro/robohash/blank
+  github_issues:
+    enable: false
+    repo:
+  disqus:
+    enable: false
+    forum:
+    api_key:
+
+# Нижняя правая кнопка
+# --------------------------------------
+
+# Преобразование между традиционным и упрощенным китайским языком
+translate:
+  enable: false
+  # Текст кнопки
+  default: 繁
+  # язык веб-сайта (1 - традиционный китайский / 2 - упрощенный китайский)
+  defaultEncoding: 2
+  # Time delay
+  translateDelay: 0
+  # Текст кнопки, если язык - упрощенный китайский
+  msgToTraditionalChinese: '繁'
+  # Текст кнопки, если язык традиционный китайский
+  msgToSimplifiedChinese: '簡'
+
+# Режим чтения
+readmode: true
+
+# темный режим
+darkmode:
+  enable: true
+  # кнопка темного и светлого режимов
+  button: true
+  # Автоматическое переключение между темным и светлым режимами
+  # autoChangeMode: 1 изменяется в зависимости от системы, неподдерживаемые браузеры / системы переключаются в темный режим с 6 вечера до 6 утра в зависимости от времени
+  # autoChangeMode: 2 переключаться в темный режим только в соответствии с временем с 18:00 до 6:00.
+  # autoChangeMode: false Отмена автоматического переключения
+  autoChangeMode: false
+
+# Лайтбокс
+# --------------------------------------
+# Вы можете выбрать только один или ни один
+
+# medium-zoom
+# https://github.com/francoischalifour/medium-zoom
+medium_zoom: false
+
+# fancybox
+# http://fancyapps.com/fancybox/3/
+fancybox: true
+
+# Настройки тегов плагинов
+# --------------------------------------
+
+# mermaid
+# see https://github.com/knsv/mermaid
+mermaid:
+  enable: false
+  # built-in themes: default/forest/dark/neutral
+  theme: default
+
+# Примечание (выноска Bootstrap)
+note:
+  # Обратите внимание на значения стиля тега:
+  # - простой bs-callout старый стиль оповещения. По умолчанию.
+  # - современный стиль предупреждений bs-callout (v2-v3).
+  # - плоский стиль выноски с фоном, как в Mozilla или StackOverflow.
+  # - отключено отключить импорт всех стилей CSS тега заметки.
+  style: simple
+  icons: false
+  border_radius: 3
+  # Смещение более светлого фона в% для современных и плоских стилей (modern: -12 | 12; flat: -18 | 6).
+  # Смещение также применяется к переменным тега метки. Эта опция может работать с отключенным тегом заметки.
+  light_bg_offset: 0
+
+# Другой
+# --------------------------------------
+
+# Artitalk
+# see https://artitalk.js.org/
+artitalk:
+  appId:
+  appKey:
+  option:
+
+# Pjax [Beta]
+# Он может содержать ошибки и нестабилен, сообщите об обнаружении ошибок.
+# https://github.com/MoOx/pjax
+pjax:
+  enable: true
+  exclude:
+    # - xxxx
+    # - xxxx
+
+# Вводим css и скрипт (игрок / встреча)
+aplayerInject:
+  enable: true
+  per_page: true
+
+aplayer:
+  meting: true
+  asset_inject: true
+
+# Snackbar
+# https://github.com/polonel/SnackBar
+# position Положение всплывающего окна
+# Необязательный top-left / top-center / top-right / bottom-left / bottom-center / bottom-right
+snackbar:
+  enable: true
+  position: bottom-right
+  bg_light: '#49b1f5' # The background color of Toast Notification in light mode
+  bg_dark: '#121212' # The background color of Toast Notification in dark mode
+
+# Baidu Push 
+baidu_push: false
+
+# https://instant.page/
+# предварительная выборка
+instantpage: false
+
+# https://github.com/vinta/pangu.js
+# Вставить пробел между китайскими и английскими символами
+pangu:
+  enable: false
+  field: site # site/post
+
+# Lazyload 
+# https://github.com/verlok/lazyload
+lazyload:
+  enable: true
+  post: /img/loading.gif
+
+# PWA
+# Смотрите на https://github.com/JLHwung/hexo-offline
+# ---------------
+# pwa:
+#   enable: true
+#   manifest: /img/pwa/manifest.json
+#   theme_color: "#fff"
+#   apple_touch_icon: /img/pwa/apple-touch-icon.png
+#   favicon_32_32: /img/pwa/32.png
+#   favicon_16_16: /img/pwa/16.png
+#   mask_icon: /img/pwa/safari-pinned-tab.svg
+
+# Отключить преобразование Baidu на мобильных устройствах
+disable_baidu_transformation: true
+
+# Открытые метатеги графа
+# https://developers.facebook.com/docs/sharing/webmasters/
+Open_Graph_meta: true
+
+# Кеширует содержимое во фрагменте, ускоряет генерацию
+fragment_cache: true
+
+# Inject
+# Вставляем код в заголовок (перед тегом '</head>') и внизу (перед тегом '</body>')
+# Вставить код перед головой </head> и перед нижней </body>
+inject:
+  head:
+    - '<style type="text/css">#toggle-sidebar {bottom: 80px}</style>'
+  bottom:
+     - <div class="aplayer no-destroy" data-id="002yHsxJ3ian5t" data-server="tencent" data-type="album" data-lrctype="0" data-fixed="true" data-mini="true" data-listFolded="false" data-volume="0.5" data-order="random" data-preload="none" data-theme="#e81c1c" data-autoplay="false" muted></div>
+
+# CDN
+# Не изменяйте следующие настройки, если не знаете, как они работают
+# Пожалуйста, не изменяйте при необходимости
+CDN:
+  # main
+  main_css: /css/index.css
+  jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
+  main: /js/main.js
+  utils: /js/utils.js
+
+  # pjax
+  pjax: https://cdn.jsdelivr.net/npm/pjax/pjax.min.js
+
+  # comments
+  gitalk: https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js
+  gitalk_css: https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css
+  valine: https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js
+  disqusjs: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
+  disqusjs_css: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
+  utterances: https://utteranc.es/client.js
+
+  # share
+  addtoany: https://static.addtoany.com/menu/page.js
+  sharejs: https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js
+  sharejs_css: https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css
+
+  # search
+  local_search: /js/search/local-search.js
+  algolia_js: /js/search/algolia.js
+  algolia_search: https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.js
+  algolia_search_css: https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.css
+
+  # math
+  mathjax: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  katex: https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css
+  katex_copytex: https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js
+  katex_copytex_css: https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css
+  mermaid: https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js
+
+  # count
+  busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
+
+  # background effect
+  canvas_ribbon: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js
+  canvas_fluttering_ribbon: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js
+  canvas_nest: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js
+
+  lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js
+  instantpage: https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js
+  typed: https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js
+  pangu: https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js
+
+  # photo
+  fancybox_css: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css
+  fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js
+  medium_zoom: https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js
+
+  # snackbar
+  snackbar_css: https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css
+  snackbar: https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js
+
+  # effect
+  activate_power_mode: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js
+  fireworks: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js
+  click_heart: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js
+  ClickShowText: https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js
+
+  # fontawesome
+  fontawesome: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css
+
+  # Conversion between Traditional and Simplified Chinese
+  translate: /js/tw_cn.js
+
+  # justifiedGallery
+  justifiedGallery_js: https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js
+  justifiedGallery_css: https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css
+
+  # aplayer
+  aplayer_css: /css/aplayer/APlayerL.css
+  aplayer_js: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
+  meting_js: https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js
+
+  # Prism.js
+  prismjs_js: https://cdn.jsdelivr.net/npm/prismjs/prism.min.js
+  prismjs_lineNumber_js: https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js
+  prismjs_autoloader: https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
+
+  artitalk: https://cdn.jsdelivr.net/npm/artitalk
