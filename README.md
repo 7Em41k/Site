@@ -1,13 +1,13 @@
 <p align="center">
-  <a href="https://t.me/bsba_group">
-    <img src="assets/logo.png" width="180" height="180">
+  <a href="https://t.me/l7em41kl">
+    <img src="themes/Butterfly/source/img/Logo.svg" width="180" height="180">
   </a>
-  <h1 align="center">The BSBA Portfolio Web Page</h1>
+  <h1 align="center">The Small Test Portfolio Web Page</h1>
 </p>
 
 <p align="center">
-  <a href="https://app.netlify.com/sites/bsba/deploys">
-    <img src="https://api.netlify.com/api/v1/badges/c8bd4cd3-39c0-4893-ad01-ba2b7e52f555/deploy-status">
+  <a href="https://app.netlify.com/sites/7em41k/deploys">
+    <img src="https://api.netlify.com/api/v1/badges/227932bd-c3be-4226-b879-f9399520ba58/deploy-status">
   </a>
 </p>
 
@@ -24,14 +24,12 @@ Deploy your own Hexo project with [**ZEIT Now CLI**](https://zeit.co/download).
 | Versions:            | Links:                             | Source Codes:                                                 |
 |----------------------|------------------------------------|---------------------------------------------------------------|
 |**Stock Hexo**        | _https://hexo.now-examples.now.sh_ |[Source](https://github.com/zeit/now-examples/tree/master/hexo)|
-|**Genemator's Blog**  | _http://bsba.gq_                   |[Source](https://github.com/genemators/bsba)                |
 |**Vue.js Homepage**   | _https://vuejs.org/_               |[Source](https://github.com/vuejs/vuejs.org)                   |
 |**Hexo's Homepage**   | _https://hexo.io/_                 |[Source](https://github.com/hexojs/hexo)                       |
-|**Meteor.js Homepage**| _https://docs.meteor.com/_         |[Source](https://github.com/meteor/docs)                       |
 
-> The web page is still in beta phase so feel free to [open issues](https://github.com/genemators/bsba/issues/new) and give me some suggestions.
+> The web page is still in beta phase so feel free to [open issues](https://github.com/7Em41k/Site/issues/new) and give me some suggestions.
 ---
 
-> Important Note: Under the AGPL-3.0 license, if you're running your own instance, you should add a link to the source [(this repository)](https://github.com/genemators/bsba) in your websites bio. If you're modifying this source and making your own bot, you should link to the source of your own version of the bot according to the AGPL-3.0 license. Check [LICENSE](LICENSE) for more info.
+> Important Note: Under the AGPL-3.0 license, if you're running your own instance, you should add a link to the source [(this repository)](https://github.com/7Em41k/Site) in your websites bio. If you're modifying this source and making your own bot, you should link to the source of your own version of the bot according to the AGPL-3.0 license. Check [LICENSE](LICENSE) for more info.
 
-`BSBA` icon is from [Genemator](https://t.me/genemator/) by Sokhibjon Orzikulov.
+`Site` icon is from [7Em41k](https://t.me/l7em41kl/) by Semen Erofeev.
