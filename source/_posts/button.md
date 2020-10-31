@@ -4,8 +4,9 @@ author: 7Em41k
 date: 2020-10-07 19:45:49
 updated:
 tags: Button
-categories:
-keywords:
+categories: 
+- [Test, Buttons]
+keywords: buttons, кнопки
 description:
 comments:
 cover:
