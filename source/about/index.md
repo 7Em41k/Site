@@ -5,7 +5,7 @@ updated:
 type: "about"
 comments:
 description:
-keywords:
+keywords: about, о нас,
 top_img:
 mathjax:
 katex:
